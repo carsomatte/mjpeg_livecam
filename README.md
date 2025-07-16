@@ -54,7 +54,6 @@ Firewall rules managed by UFW ensure that only traffic over the VPN interface is
      ```
    - On Camera Host, allow 
       ```bash
-     sudo ufw allow 51820/udp                             # may not need
      sudo ufw allow in on wg0 to any port 22 proto tcp    # SSH access over VPN
      sudo ufw allow in on wg0 to any port 8080 proto tcp  # Camera stream over VPN
      ```
