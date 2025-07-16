@@ -34,7 +34,7 @@ Firewall rules managed by UFW ensure that only traffic over the VPN interface is
 ## Setup Instructions
 1. **Set up Oracle Cloud Instance and WireGuard**
    - Use the provided config files (`oracle-server.conf`, `camera.conf`, `main_client.conf`) for all three hosts.
-   - Ensure your Oracle instance has a public IP.
+   - Ensure your Oracle instance has a public IP and allow 22/tcp and 51820/udp in the cloud's ingress rules.
    - On the Oracle instance, enable IP forwarding:
 
      ```bash
@@ -61,7 +61,7 @@ Firewall rules managed by UFW ensure that only traffic over the VPN interface is
 
 4. **Install `mjpg_streamer` on the Camera Host**
    - Install dependencies and compile `mjpg_streamer` or use a package manager.
-   - Start the stream, ensuring it binds to all interfaces or just the VPN IP:
+   - Start the stream, ensuring it binds to all interfaces or just the VPN IP
 5. **Test from Main Client**
    - Make sure you're connected to the WireGuard VPN on your main computer.
    - Access the video stream via:
