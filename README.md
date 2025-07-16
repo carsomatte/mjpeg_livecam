@@ -34,7 +34,7 @@ Firewall rules managed by UFW ensure that only traffic over the VPN interface is
 ## Setup Instructions
 1. **Set up Oracle Cloud Instance and WireGuard**
    - Use the provided config files (`oracle-server.conf`, `camera.conf`, `main_client.conf`) for all three hosts.
-   - Ensure your Oracle instance has a public IP and port `51820` open.
+   - Ensure your Oracle instance has a public IP.
    - On the Oracle instance, enable IP forwarding:
 
      ```bash
